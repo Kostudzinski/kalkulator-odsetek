@@ -1,7 +1,5 @@
 'use strict';
 
-console.log('elo');
-
 function oblicz() {
 
     var wplata = document.getElementById('wplata').value;
@@ -27,27 +25,34 @@ function oblicz() {
     var wynik = document.getElementById('wynik');
     
     var button = document.getElementById('button');
-    
-    var rezultat;
 
     function obliczWplate() {
         
         var oprocentowanieOpodatkowane = 0.19;
         
+        var rezultat;
+        
             if (podatekBelki.checked === true) {
-                wynik = wynik - oprocentowanieOpodatkowane * wynik;
+                rezultat = rezultat - (oprocentowanieOpodatkowane * rezultat);
             }
         
         rezultat = wplata * Math.pow(( 1 + (oprocentowanieOpodatkowane / okres ) ), (okres * iloscLat) );
         
-        
+        return rezultat;
 
-    }
+    };
     
-    button.onclick = function() {
+    
+
+            
+    button.onclick = function () {
+    obliczWplate();
+    console.log('test');
     wynik.innerHTML = rezultat;
-}
-    
-    
-}
 
+};
+    
+    
+};
+
+oblicz();
