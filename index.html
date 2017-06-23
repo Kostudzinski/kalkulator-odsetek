@@ -6,7 +6,7 @@
 </head>
 <body>
    
-    <label for="wplata">Wpłata</label>
+    <p>Wpłata</p>
     <input type="number" id="wplata" name="wplata"><span>PLN</span><br><br><br>
     
     <p>Częstotliwość kapitalizacji</p>    
@@ -16,16 +16,16 @@
               <option value="1">Rocznie</option>
     </select><br><br><br>
     
-    <label for="ilsc-lat">Ilość lat</label>
+    <p>Ilość lat</p>
     <input type="number" id="ilosc-lat" name="ilosc-lat"><br><br><br>
     
-    <label for="oprocentowanie">Stopa zwrotu w %:</label>
+    <p>Stopa zwrotu w %:</p>
     <input type="number" id="oprocentowanie" name="oprocentowanie"><br><br><br>
     
     <input type="checkbox" id="podatek"><label for="podatek">Uwzględnij
     podatek Belki 19%</label><br><br>   
     
-    <input id ="button" type="submit" value="Oblicz">
+    <input id ="button" type="submit" value="Oblicz" onclick="oblicz()">
     
     <p id="wynik"></p>
     
